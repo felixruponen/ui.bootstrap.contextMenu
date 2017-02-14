@@ -230,6 +230,7 @@ angular.module('ui.bootstrap.contextMenu', [])
         $(event.currentTarget).addClass('context');
         var $ul = $('<ul>');
         $ul.addClass('dropdown-menu');
+        $ul.addClass('context-menu');
         $ul.attr({ 'role': 'menu' });
         $ul.css({
             display: 'block',

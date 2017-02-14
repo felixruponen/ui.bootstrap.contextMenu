@@ -326,6 +326,11 @@ angular.module('ui.bootstrap.contextMenu', [])
               return false;
             }
 
+            // Don't show context menu when element has certain class
+            if(attrs.ignoreForClass && element.hasClass(attrs.ignoreForClass)) {
+              return false;
+            }
+
             $scope.$apply(function () {
                 var options = $scope.$eval(attrs.contextMenu);
                 var customClass = attrs.contextMenuClass;
